@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://images.squarespace-cdn.com/content/v1/58e8c089579fb3beba98d799/1542510998506-WC6ABXZ468IFP28HAXKS/Mountains.png"
+        type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Himalayas</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: "poppins", sans-serif;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100vh;
+            min-width: 400px;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 0 5%;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-right: auto;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav .menu li a {
+            position: relative;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: 0.3s ease;
+        }
+
+       .active, 
+       .menu li a:hover {
+        color: aqua;
+        }
+
+        header nav #toggle {
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 10vh;
+        }
+
+        .home {
+            padding: 2rem 5% 0;
+            color: #fff;
+            text-align: center;
+        }
+        .home-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+
+        .home h1 {
+            text-transform: uppercase;
+            font-size: 3.25rem;
+            font-weight: 500;
+        }
+
+        .home p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin: -5px 0 30px;
+
+        }
+
+        .home button {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid white;
+        }
+        .home button:hover {
+            background-color: white;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid aqua;
+        }
+
+        .home .images .img-1,
+        .home .images .img-2,
+        .home .images .img-3 {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            z-index: -10;
+
+        }
+        .home .images .img-1{
+            background: url(https://wallpapercave.com/wp/n0uSC1f.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .home .images .img-2{
+            background-position: center;
+            background-size: cover;
+         
+        }
+        .home .images .img-3{
+            background: url();
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">himalayas</div>
+        <nav>
+            <ul class="menu">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <i class="ri-menu-fold-line" id="toggle"></i>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Welcome to himlayas</h1>
+            <P>Lorem ipsum dolor, sit amet consectetur is doloremque evenfugit quo!</P>
+            <button>Join Now</button>
+        </div>
+        <div class="images">
+            <div class="img-1"></div>
+            <div class="img-2"></div>
+            <div class="img-3"></div>
+        </div>
+    </section>
+    <script>
+        gsap.from('.logo', { duration: 1.2, opacity: 0, x: -150,ease: 'elastic.out(1, 0.3)', delay: 0.6 });
+        gsap.from('nav', { duration: 1.2, opacity: 0, x: 150, ease: 'power1.out', delay: 0.6 });
+        gsap.from('h1', { duration: 1.2, opacity: 0, y: 150, ease: 'power2.out', delay: 0.6 });
+        gsap.from('p', { duration: 1.2, opacity: 0, y: 150, ease: 'back.in', delay: 1.25 });
+        gsap.from('button', { duration: 1.2, opacity: 0, y: 150, ease: 'expo.in', delay: 1 });
+        
+    </script>
+</body>
+
+</html>
